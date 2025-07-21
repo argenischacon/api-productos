@@ -220,7 +220,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 👥 Autores
 
-- **Tu Nombre** - *Desarrollo inicial* - [TuUsuario](https://github.com/TuUsuario)
+- **Argenis ☕** - *Desarrollo inicial* - [argenischacon](https://github.com/argenischacon)
 
 ## 🙏 Agradecimientos
 
