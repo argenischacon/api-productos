@@ -1,0 +1,49 @@
+# Archivos de Maven
+target/
+!target/*.jar
+!target/lib/
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Archivos de configuración local
+*.env
+db.env
+application-local.properties
+
+# Archivos de logs
+*.log
+logs/
+
+# Reportes de cobertura
+htmlReport/
+coverage/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentación
+README.md
+LICENSE
+HELP.md
+
+# Archivos de configuración de IDE
+.project
+.classpath
+.settings/
+.factorypath
+
+# Archivos de Maven wrapper
+.mvn/
+mvnw
+mvnw.cmd 

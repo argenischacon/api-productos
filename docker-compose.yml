@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # Base de datos PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: productos-db
+    environment:
+      POSTGRES_DB: productos
+      POSTGRES_USER: productos_user
+      POSTGRES_PASSWORD: productos_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - productos-network
+
+  # Aplicación Spring Boot
+  api-productos:
+    build: .
+    container_name: api-productos
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/productos
+      DB_USERNAME: productos_user
+      DB_PASSWORD: productos_password
+      SPRING_PROFILES_ACTIVE: prod
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - productos-network
+
+volumes:
+  postgres_data:
+
+networks:
+  productos-network:
+    driver: bridge 
