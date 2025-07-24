@@ -21,9 +21,9 @@ services:
     build: .
     container_name: api-productos
     environment:
-      DB_URL: jdbc:postgresql://postgres:5432/productos
-      DB_USERNAME: productos_user
-      DB_PASSWORD: productos_password
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/productos
+      SPRING_DATASOURCE_USERNAME: productos_user
+      SPRING_DATASOURCE_PASSWORD: productos_password
       SPRING_PROFILES_ACTIVE: prod
     ports:
       - "8080:8080"
